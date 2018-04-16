@@ -1,0 +1,68 @@
+<component-header></component-header>
+<div class="horizontal-margin">
+    <div class="row center-lg center-sm">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+            <div class="">
+                <h2>Orders by customer</h2>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <form action="" class="k-form" [formGroup]="formOrderFilter">
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <label class="k-form-field">
+                                        <span>Customer</span>
+                                        <kendo-combobox [data]="customerList" [textField]="'name'" [valueField]="'name'" formControlName="customer">
+                                        </kendo-combobox>
+                                    </label>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <label class="k-form-field">
+                                        <span>Start Date</span>
+                                        <kendo-datepicker formControlName="startValueDate" [min]="startMinDate" [max]="startMaxDate"></kendo-datepicker>
+                                    </label>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <label class="k-form-field">
+                                        <span>End Date</span>
+                                        <kendo-datepicker formControlName="endValueDate" [min]="endMinDate" [max]="endMaxDate"></kendo-datepicker>
+                                    </label>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <br>
+                                    <button kendoButton [disabled]="!CanQueryReportClick()" [primary]="true" (click)="QueryReportClick()">Consultar</button>
+                                </div>
+                            </div>
+
+
+
+                        </form>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <kendo-grid [data]="orderData" [height]="400" [filterable]="false" [sortable]="false">
+                            <kendo-grid-column field="orderId" title="Order Id" width="100">
+                            </kendo-grid-column>
+                            <kendo-grid-column field="orderDate" title="Date" width="200" format="{0:yyyy-MM-dd}">
+                            </kendo-grid-column>
+                            <kendo-grid-column field="deliveryAddress" title="Delivery Address" width="250">
+                            </kendo-grid-column>
+                            <kendo-grid-column field="customerName" title="Customer Name" width="250">
+                            </kendo-grid-column>
+                            <kendo-grid-column field="stateName" title="State Name" width="250">
+                            </kendo-grid-column>
+                            <kendo-grid-column field="totalPrice" title="Total Price" format="{0:c0}" width="250">
+                            </kendo-grid-column> 
+                            <div *kendoGridDetailTemplate="let dataItem">
+                                <category-details [category]="dataItem"></category-details>
+                            </div>
+                        </kendo-grid>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

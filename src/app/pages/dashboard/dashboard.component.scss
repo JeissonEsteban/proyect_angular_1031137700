@@ -1,0 +1,23 @@
+@import "../../../theme.scss";
+
+
+.horizontal-margin{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.card {
+    padding: 5px;
+    text-align: center;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(10,10,10,0.12), 0 1px 1px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.4,.25,1);
+    height: 550px;
+}
+
+.card:hover {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.22);
+}

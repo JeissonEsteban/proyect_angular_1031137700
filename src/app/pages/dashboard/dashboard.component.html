@@ -1,0 +1,78 @@
+<component-header></component-header>
+<div class="horizontal-margin">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="">
+                <h2>Customers</h2>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="">
+                                    <kendo-chart style="height: 200px">
+                                            <kendo-chart-title text="Number of products available per customer"></kendo-chart-title>
+                                            <kendo-chart-legend position="bottom"></kendo-chart-legend>
+                                            <kendo-chart-tooltip format="{0:d}"></kendo-chart-tooltip>
+                                            <kendo-chart-series>
+                                              <kendo-chart-series-item 
+                                              [data]="seriesData"
+                                              field="numberProductsAvaible"
+                                              categoryField="name"
+                                              >
+                                              </kendo-chart-series-item>
+                                            </kendo-chart-series>
+                                          </kendo-chart>
+                            </div>
+                    </div>
+                </div>
+                    <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <h3>Purchased by Customer Information</h3>
+                                    <kendo-grid [data]="customerData" [height]="300" [filterable]="false" [sortable]="false">
+                                            <kendo-grid-column field="name" title="Name" width="200">
+                                            </kendo-grid-column>
+                                            <kendo-grid-column field="mail" title="Mail" width="250">
+                                            </kendo-grid-column>
+                                            <kendo-grid-column field="state" title="State" width="80" filter="false">
+                                                    <ng-template kendoGridCellTemplate let-dataItem>
+                                                        <input type="checkbox" [checked]="dataItem.state" disabled/>
+                                                    </ng-template>
+                                            </kendo-grid-column>
+                                            <kendo-grid-column field="ordersCount" title="Number Orders" format="{0:d}" filter="false">
+                                            </kendo-grid-column>
+                                            <kendo-grid-column field="productsCount" title="Purchased Products" format="{0:d}" filter="false">
+                                            </kendo-grid-column>
+                                            <kendo-grid-column field="priceTotal" title="Purchased" format="{0:c0}" filter="false">
+                                            </kendo-grid-column>
+                                        </kendo-grid>
+                            </div>   
+                        </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <h2>Charts</h2>
+            <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="card">
+                                        <kendo-chart >
+                                                <kendo-chart-title text="% Sales per product"></kendo-chart-title>
+                                                <kendo-chart-legend position="bottom"></kendo-chart-legend>
+                                                <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip>
+                                                <kendo-chart-series>
+                                                  <kendo-chart-series-item type="pie"
+                                                    [data]="productSaleData"
+                                                    field="percentPrice"
+                                                    categoryField="name"
+                                                    legendLabel="percentPrice">
+                                                  </kendo-chart-series-item>
+                                                </kendo-chart-series>
+                                              </kendo-chart>
+                            </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+       
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<kendo-grid
+[data]="category.orderDetails"
+[pageSize]="5"
+[skip]="skip"
+[pageable]="true"
+[scrollable]="'none'"
+(pageChange)="pageChange($event)"
+>
+<kendo-grid-column field="productId" title="Product Id" width="120">
+</kendo-grid-column>
+<kendo-grid-column field="productName" title="Product Name">
+</kendo-grid-column>
+<kendo-grid-column field="countSale" title="Count" format="{0:d}">
+</kendo-grid-column>
+<kendo-grid-column field="price" title="Price" format="{0:c0}">
+</kendo-grid-column>
+</kendo-grid>

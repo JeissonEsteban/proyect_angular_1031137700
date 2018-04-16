@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row center-xs start-sm start-md start-lg">
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 text-center card">
+            <div class="row">
+                <div class="col-xs-6 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Login</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <form class="k-form" [formGroup]="formLogin">
+                        <fieldset>
+                            <label class="k-form-field">
+                                <kendo-textbox-container floatingLabel="Usuario">
+                                    <input kendoTextBox formControlName="accessCode"/>
+                                </kendo-textbox-container>
+                            </label>
+                            <label class="k-form-field">
+                                <kendo-textbox-container floatingLabel="Contraseña">
+                                    <input type="password" kendoTextBox formControlName="password"/>
+                                </kendo-textbox-container>
+                            </label>
+
+                        </fieldset>
+                        <div class="text-center">
+                            {{messageLogin}}
+                        </div>
+                        <div class="text-center">
+                            <button type="button" [disabled]="!CanLoginClick()" class="k-button k-primary" (click)="LogInClick()">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

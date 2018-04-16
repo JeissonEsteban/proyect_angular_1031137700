@@ -1,0 +1,83 @@
+@import "../../../theme.scss";
+
+
+h1{
+    color: $color-white;
+    font-size: 25px;
+    margin-top: 50px;
+}
+.body{
+    width: 100%;
+    height: 100%;
+    background: url('/assets/img/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.container{
+    margin-top: 100px;
+    margin-left: 50px;
+
+  
+}
+.card{
+    background-color: $color-background-transparent;
+    min-height: 400px;
+    -webkit-box-shadow: 0px 9px 23px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 23px -11px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 23px -11px rgba(0,0,0,0.75);
+    border-bottom:5px solid $color-background-2;  
+}
+@media only screen and (max-width: 770px) {
+    .container{
+        margin-top: 50px !important;
+        margin: auto;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .card{
+        min-height: 300px;
+    }
+}
+
+/*Forms*/
+.k-label{
+    font-family: $font-family-default;
+    border:none;
+    color:$color-white;
+
+}
+.k-state-empty{
+    color:$color-black;
+
+}
+.k-autocomplete, .k-combobox .k-dropdown-wrap, .k-datepicker .k-picker-wrap, .k-timepicker .k-picker-wrap, .k-datetimepicker .k-picker-wrap, .k-dateinput .k-dateinput-wrap, .k-textbox, .k-input.k-textbox, .k-textarea, .k-multiselect, .k-multiselect-wrap, .k-numerictextbox .k-numeric-wrap{
+    color: $color-black;
+
+    font-family: $font-family-default;
+}
+
+
+
+.k-button.k-primary, .k-slider .k-draghandle, .k-switch-on .k-switch-handle{
+    background-color:$color-background-2;
+    border-color:$color-background-2;
+    font-family: $font-family-default;
+}
+
+.k-form .k-form-field, .k-form-inline .k-form-field{
+    text-align: center;
+}
+
+.k-form, .k-form-inline{
+    color:$color-white;
+}
+
+.k-state-empty.k-state-focused{
+    color:$color-white;
+}
+
+.k-button{
+    padding:10px 30px;
+}

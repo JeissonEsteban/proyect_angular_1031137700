@@ -1,0 +1,16 @@
+@import "../../../theme.scss";
+
+
+h1{
+    font-size: 1.2em;
+    color:$color-white;
+    margin-left:10px;
+    margin-top: 15px;
+}
+.sub-nav{
+    padding: 5px;
+}
+.k-dropdown{
+    width: 100%;
+    font-family: $font-family-default;
+}

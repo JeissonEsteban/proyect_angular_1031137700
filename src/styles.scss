@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@progress/kendo-theme-default/scss/all";
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import "./theme.scss";
+
+/*Body*/
+body{
+    padding: 0px;
+    margin: 0px;
+  /*  background: url('/assets/img/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+*{
+    font-family: $font-family-default;
+}
+h1{
+    margin-top: 0px;
+    font-family: $font-family-title;
+    font-weight: lighter;
+}
+/*Text-Align*/
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+/*Padding*/
+.padding-5{
+    padding: 5px;
+}
+.padding-10{
+    padding: 10px;
+}
+
+/*Forms */
+.k-label{
+    font-family: $font-family-default;
+}
+
+
+/*NavBar*/
+nav{
+    background-color: $color-background;
+    width: 100%;
+    height: 50px;
+}
