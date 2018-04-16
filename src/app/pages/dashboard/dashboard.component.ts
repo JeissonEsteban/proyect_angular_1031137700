@@ -63,4 +63,9 @@ export class DashboardComponent implements OnInit {
     this.store.dispatch(action);
   }
 
+  public refresh(){
+    this.LoadDataCustomers();
+     this.LoadDataProductsSales();
+  }
+
 }
